@@ -8,5 +8,5 @@ RAW NAMES: Ever get tired of typing "./" everytime you want to launch a program 
 
 CD & PWD: Ever get tired of looking at your damn ugly name? Is that long directory name everytime you type in a command pissing you off? Yearning for minamilsim? Its 2025 of course you are! Mysh has the special feature of removing the entire that takes up screen space everytime you launch a new command. Instead the built in print working directory (pwd) should be used to find the directory your currently in.
 
-Which: Have you ever found yourself feending to know where programs such as ls, top, and grep lie? well look no further. Literally.. Simply type which (command) in mysh and find the its path!
+Which: Have you ever found yourself feinding to know where programs such as ls, top, and grep lie? well look no further. Literally.. Simply type which (command) in mysh and find the its path! 
 
