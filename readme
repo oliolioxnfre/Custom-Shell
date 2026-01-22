@@ -1,0 +1,12 @@
+Mysh is a custom shell that supports both interactive and batch mode command execution. Mysh decides which mode to use through its use of isatty() in the main function. Mysh reads user input lines, tokenizes them using the tokenize() function which handles all special characters and even wildcard expansion with the asterisk (*). Command execution relies on parseAndRunCommand() which first evaluates conditionals ("and" or "or"), then identifies whether commands contain pipes. For standard commands, executeCommand() determines if it's a built-in command (cd, pwd, which, exit, die) via executeBuiltIn(), or an external command requiring fork() and execv(). The searchExecutable() function locates command binaries in standard paths. For piped commands, executeMultiPipeline() creates the necessary process connections using pipe(), fork(), and file descriptor manipulation. Input/output redirection is handled by the redirection() function which uses open() and dup2() to modify standard streams. The shell tracks execution status in the previousStatus variable to support conditional execution. Wildcard patterns in arguments are expanded through directory scanning in expandWildcard().
+
+In short mysh program is designed to act as your very own personalized shell. This means doing mostly everything that a normal shell does
+
+mysh is capable of pretty much everything under the sun but the commands built dirrectly into mysh's code have been hardcoded introduce some extra functionallity to the typical shell. So for starters I will name everything mysh adds. 
+
+RAW NAMES: Ever get tired of typing "./" everytime you want to launch a program in the terminal? are you struggling with carpeltunnel and cant reach your trackpad to hit some launch button? fear no more, mysh's raw names functionallity allows you to launch a program with the name of the program alone.
+
+CD & PWD: Ever get tired of looking at your damn ugly name? Is that long directory name everytime you type in a command pissing you off? Yearning for minamilsim? Its 2025 of course you are! Mysh has the special feature of removing the entire that takes up screen space everytime you launch a new command. Instead the built in print working directory (pwd) should be used to find the directory your currently in.
+
+Which: Have you ever found yourself feending to know where programs such as ls, top, and grep lie? well look no further. Literally.. Simply type which (command) in mysh and find the its path!
+

@@ -1,0 +1,35 @@
+#directionals (<>)
+greet < greet.txt > a0.txt
+ls -l > a1.txt
+greet < greet.txt > a2.txt
+greet > a2.txt < greet.txt
+greet < < a2.txt
+ls -l > > a2.txt
+
+#Wildcards (*)
+open *.txt
+cat a*
+cat g*t.txt
+
+#Pipeline(|)
+cat greet.txt | greet 
+cat greet.txt | greet | greet 
+
+#Which
+which top
+
+#pwd & cd
+pwd
+cd .. 
+pwd
+and cd ..
+pwd
+or cd ..
+pwd
+
+#MIX
+cat greet.txt | greet | greet > a00.txt
+cat greet.txt | greet | greet > a*0.txt
+which ls > a9.txt
+
+exit
